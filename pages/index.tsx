@@ -62,6 +62,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         image: meetup.image,
         address: meetup.address,
       })),
+      revalidate: 10 // means that the data will be refreshed from the Server side every 10 sec as long as it been changed so the page will be up-to date( IF NEEDED)
     },
   };
 };
